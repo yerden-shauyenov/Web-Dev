@@ -1,0 +1,193 @@
+
+:root {
+    --gh-gray-text: rgb(99, 108, 118);
+    --gh-blue: rgb(9, 105, 218);
+    --gh-black: rgb(31, 35, 40);
+    --gh-border: rgb(208, 218, 222);
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--gh-black);
+    line-height: 1.5;
+    margin: 0;
+    background-color: white;
+}
+
+.container {
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--gh-gray-text);
+    max-width: 800px;
+    margin: 0 auto 32px;
+}
+
+.btn-primary {
+    background-color: rgb(47, 54, 61);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pricing-section {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 80px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    flex: 1;
+    border: 1px solid var(--gh-border);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.pricing-card.recommended {
+    border: 2px solid var(--gh-blue);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--gh-blue);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 16px;
+    color: var(--gh-gray-text);
+    font-weight: normal;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    font-size: 14px;
+}
+
+.pricing-card li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pricing-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--gh-gray-text);
+}
+
+.card-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    border: 1px solid var(--gh-border);
+    color: var(--gh-black);
+}
+
+.card-btn.black {
+    background: rgb(47, 54, 61);
+    color: white;
+}
+
+.addons-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 100px;
+}
+
+.addon-card {
+    border: 1px solid var(--gh-border);
+    border-radius: 8px;
+    padding: 24px;
+    transition: box-shadow 0.3s;
+}
+
+.addon-card:hover {
+    box-shadow: 0 8px 24px rgba(149,157,165,0.2);
+}
+
+.addon-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addon-card h3 {
+    font-size: 18px;
+    margin: 0 0 8px 0;
+}
+
+.addon-card p {
+    font-size: 14px;
+    color: var(--gh-gray-text);
+    margin-bottom: 16px;
+}
+
+.learn-more {
+    color: var(--gh-blue);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+        pricing-section, .addons-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+}
